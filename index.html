@@ -12,21 +12,21 @@
     <form>
         <div>
             <div><label>Email</label></div>
-            <input type="email" name="email" placeholder="Emeil">
+            <input type="email" name="email" id="email" onchange="validateFields()" placeholder="Email">
 
         </div>
         <div><label>Senha</label></div>
-        <input type="password" name="password" placeholder="Senha">
+        <input type="password" name="password" id="password" onchange="validateFields()" placeholder="Senha">
         </div>
 
         <div>
             <div><label>Esqueci minha senha</label></div>
-            <button type="button" class="solid">Recuperar senha</button>
+            <button type="button" class="solid" disabled="true">Recuperar senha</button>
         </div>
 
         <div>
 
-            <button type="button" class="solid">Entrar</button>
+            <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
         </div>
 
         <div>
@@ -40,6 +40,17 @@
 
 <script src="index.js"></script>
 
-   
+
+
+<!-- const email = document.getElementById("email").value;
+        if (!email) {
+            document.getElementById('recover-passeord-button').disabled = true;
+        } else if (validateEmail(email)) {
+            document.getElementById('recover-passeord-button').disabled = false;
+
+        } else {
+            document.getElementById('recover-passeord-button').disabled = true;
+
+        } -->
 
 </html>

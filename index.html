@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Controle de gastos</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+
+
+
 </head>
+
+<script src="index.js"></script>
+<script src="validation.js"></script>
+
 
 <body>
     <form>
-        <div>
+        <div class="form-field">
             <div><label>Email</label></div>
-            <input type="email" name="email" id="email" onchange="validateFields()" placeholder="Email">
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="Email">
             <div class="error" id="email-required-error">Email é obrigatório</div>
-            <div class="error" id="email-invalid-error" >Email é invalido</div>
+            <div class="error" id="email-invalid-error">Email é invalido</div>
 
         </div>
-        <div><label>Senha</label></div>
-        <input type="password" name="password" id="password" onchange="validateFields()" placeholder="Senha">
-        <div class="error" id="password-required-error">senha é obrigatório</div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+            <div class="error" id="password-required-error">senha é obrigatório</div>
         </div>
 
         <div>
             <div><label>Esqueci minha senha</label></div>
-            <button type="button" class="solid" disabled="true">Recuperar senha</button>
+            <button type="button" class="solid" id="recover-password-button" disabled>Recuperar senha</button>
+
         </div>
 
         <div>
 
-            <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
         </div>
 
         <div>
@@ -41,19 +51,7 @@
     </form>
 </body>
 
-<script src="index.js"></script>
 
 
-
-<!-- const email = document.getElementById("email").value;
-        if (!email) {
-            document.getElementById('recover-passeord-button').disabled = true;
-        } else if (validateEmail(email)) {
-            document.getElementById('recover-passeord-button').disabled = false;
-
-        } else {
-            document.getElementById('recover-passeord-button').disabled = true;
-
-        } -->
 
 </html>
